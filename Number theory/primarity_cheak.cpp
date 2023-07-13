@@ -1,25 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
+bool is_prime(int n)
+{
+    if(n==1)return false;
+    for(int i=2;i*i<=n;i++)
+    {
+        if(n%i==0)return false;
+    }
+    return true;
+}
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    ll n;
+    int n;
     cin>>n;
-    if(n%2==0&&n!=2)cout<<"Not Prime"<<endl;
-    else
-    {
-        ll flag=1;
-        for(ll i=3;i*i<=n;i+=2)
-        {
-            if(n%i==0&&n!=i)
-            {
-                flag=0;
-                break;
-            }
-        }
-        flag?cout<<"Prime"<<endl:cout<<"Nnt Prime"<<endl;
-    }
+    is_prime(n)?cout<<"YES"<<endl:cout<<"NO"<<endl;
 }
