@@ -3,7 +3,7 @@ using namespace std;
 #define ll long long int
 ll binary_exponetiation(ll a,ll b)
 {
-    ll ans=1;
+    ll ans1=1;
     while(b)
     {
         if(b%2)
@@ -17,7 +17,7 @@ ll binary_exponetiation(ll a,ll b)
             b/=2;
         }
     }
-    return ans;
+    return ans1;
 }
 int main()
 {
